@@ -1,0 +1,85 @@
+.period {
+  height: 52px;
+  padding: 0 16px;
+  color: white;
+  border-radius: 8px;
+  background: #3a424a;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &_open {
+    background: #0e1012;
+  }
+
+  span {
+    padding: 8px 12px;
+    background: #3f4142;
+    border-radius: 8px;
+  }
+}
+
+.wrapper {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+
+  border-radius: 20px;
+  background: #3a424a;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 5px;
+  color: white;
+}
+
+.weekDay {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.day {
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+
+  &_today {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      border-radius: 4px;
+      height: 3px;
+      background: #3fb195;
+    }
+  }
+
+  &_selected_start {
+    border-radius: 5px 0px 0px 5px;
+    background: #3fb195;
+  }
+
+  &_selected_end {
+    border-radius: 0px 5px 5px 0;
+    background: #3fb195;
+  }
+
+  &_fromOtherMonth {
+    color: grey;
+  }
+}
+
+.range {
+  background: #0f9e7b;
+}
